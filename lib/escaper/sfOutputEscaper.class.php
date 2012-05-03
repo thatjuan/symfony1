@@ -108,6 +108,11 @@ abstract class sfOutputEscaper
 
         return $copy;
       }
+      else if ($value instanceof Closure)
+      {
+          //avoid escaping closures
+          return $value;
+      }
       else if (self::isClassMarkedAsSafe(get_class($value)))
       {
         // the class or one of its children is marked as safe
