@@ -287,7 +287,7 @@ class sfConfigCache
     }
 
     // ignore names
-    $ignore = array('.', '..', 'CVS', '.svn');
+    $ignore = array('.', '..', 'CVS', '.svn', '.gitignore');
 
     // create a file pointer to the module dir
     $fp = opendir($sf_app_module_dir);
